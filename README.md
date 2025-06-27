@@ -13,9 +13,8 @@ This repository documents my hands-on learning progress through the [Google Eart
 
 ---
 
-## 🗂 Repository Structure
-
-'''
+## 📂 Repository Structure
+```
 gee-megacourse-learning-log/
 ├── README.md # Overview and objectives
 ├── section-01-intro/ # GEE interface basics
@@ -27,7 +26,8 @@ gee-megacourse-learning-log/
 ├── section-06-clustering/
 ├── docs/ # Summary notes, reference links
 └── outputs/ # Example exports (maps, screenshots)
-'''
+
+```
 
 ---
 
