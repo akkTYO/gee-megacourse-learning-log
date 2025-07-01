@@ -1,5 +1,4 @@
-
-# Image Collection Filtering – GEE Learning Log
+# Filtering　Image Collection  – GEE Learning Log
 
 This note summarizes the learning from **Section 5 - Lecture 12: Filtering Image Collection** of the [Google Earth Engine Mega Course](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42661228).
 
