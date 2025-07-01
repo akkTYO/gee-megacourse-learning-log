@@ -1,10 +1,10 @@
-# 🌍 GEE MegaCourse Learning Log
+# GEE MegaCourse Learning Log
 
 This repository documents my hands-on learning progress through the [Google Earth Engine (GEE) Mega Course](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/). Each section is organized by topic and includes code samples, notes, and output visualizations.
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 - Build a consistent learning record while progressing through the course  
 - Summarize key concepts in Earth Engine JavaScript API  
@@ -13,7 +13,7 @@ This repository documents my hands-on learning progress through the [Google Eart
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ```
 gee-megacourse-learning-log/
 ├── README.md # Overview and objectives
@@ -22,7 +22,11 @@ gee-megacourse-learning-log/
 ├── section-03-image-collections/ # GEE Data Catalogue
 ├── section-04-basics/ 
 │ └── js-datatypes/ # Strings, numbers, lists, objects, functions
-├── section-05-visualization/
+├── section-05-digital-image-processing/
+│ └── image-visualization/
+│ └── image-collection/
+│ └── filtering-image-collection/
+│ └── feature-collection/
 ├── section-06-clustering/
 ├── docs/ # Summary notes, reference links
 └── outputs/ # Example exports (maps, screenshots)
