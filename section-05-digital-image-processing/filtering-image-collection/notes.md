@@ -41,7 +41,7 @@ This process results in a filtered Landsat 9 image collection that:
 - Falls within a defined **date range (Q1 2022)**
 
 ### Scaled True Color Composite (True Colour)
-![](.map_l9_b432_filtered_cloud10_2022_eastafrica.png)
+![Filtered Landsat Image](map_l9_b432_filtered_cloud10_2022_eastafrica.png)
 
 ---
 
