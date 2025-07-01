@@ -46,7 +46,6 @@ This script produces:
 
 ![Clipped Sentinel Export](map_s2_b432_median_clip_export_2022_roi.png)
 
-
 ---
 
 ## Notes
