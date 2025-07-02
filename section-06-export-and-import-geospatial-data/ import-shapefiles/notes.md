@@ -35,8 +35,7 @@ The result is a map that:
 - Uses semi-transparent red fill for easy viewing
 
 ### Preview Image
-![Image_Sudan_highlighted](`map_wb_country_sudan_highlighted_2022.png`)
-
+![Image_Sudan_highlighted](map_wb_country_sudan_highlighted_2022.png)
 ---
 
 ## Notes
