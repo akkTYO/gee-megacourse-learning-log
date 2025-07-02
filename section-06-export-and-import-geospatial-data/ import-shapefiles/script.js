@@ -12,14 +12,14 @@ Map.addLayer(roi, {}, 'World Countries');
 
 // 4. Filter one country (e.g. Sudan) by attribute field
 // Note: The field name is "NAM_0", not "NAME_EN" (depends on the shapefile)
-var Egypt = roi.filter(ee.Filter.eq('NAM_0', 'Sudan'));
+var Sudan = roi.filter(ee.Filter.eq('NAM_0', 'Sudan'));
 
 // 5. Display the selected country in red
-Map.addLayer(Egypt.style({
+Map.addLayer(Sudan.style({
   color: 'red',
   fillColor: '#FF000080',
   width: 1
 }), {}, 'Sudan');
 
 // 6. Center the map to the selected country
-Map.centerObject(Egypt, 5);
+Map.centerObject(Sudan, 5);
