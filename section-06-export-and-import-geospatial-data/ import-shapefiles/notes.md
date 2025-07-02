@@ -42,11 +42,9 @@ The result is a map that:
 
 ### Why does `"NAM_0"` work for filtering?
 
-Shapefile attributes vary depending on the source. In this World Bank dataset:
-
-- The field storing English country names is called `"NAM_0"`, not `"NAME_EN"`.
-
-Use `.limit(10)` and `print()` to explore the correct property names before filtering.
+Shapefile attributes vary depending on the source. In this World Bank dataset.
+The field storing English country names is called `"NAM_0"`, not `"NAME_EN"`.
+Check the correct property names before filtering.
 
 ### Which file should I upload from the World Bank?
 
@@ -59,9 +57,9 @@ Extract the contents. You must upload the following 4 files together to Earth En
 - `.dbf` — attribute data file
 - `.prj` — projection metadata
 
-Do not upload formats like .geojson, .gpkg, or .kml directly — these are not supported for Earth Engine Asset Uploads. Convert them to shapefiles if needed.
+Do not upload formats like `.geojson`, `.gpkg`, or `.kml` directly — these are not supported for Earth Engine Asset Uploads. Convert them to shapefiles if needed.
 
-Note: Replace 'YOUR_ASSET_PATH_HERE' in the script with your own Earth Engine asset path, such as 'users/YOUR_USERNAME/assets/WB_countries_Admin0'.
+Note: Replace `YOUR_ASSET_PATH_HERE` in the script with your own Earth Engine asset path, such as `users/YOUR_USERNAME/assets/WB_countries_Admin0`.
 
 ---
 
