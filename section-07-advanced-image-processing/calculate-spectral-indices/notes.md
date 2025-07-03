@@ -54,7 +54,7 @@ The following layers are displayed on the map:
 `QA_PIXEL` is a quality assurance band. Specific bits in this band indicate cloud, shadow, fill pixels, etc. 
 `QA_RADSAT` flags radiometric saturation.
 
-### 1. What are `qaMask` and `saturationMask` doing?
+### 2. What are `qaMask` and `saturationMask` doing?
 They extract relevant QA flags using bitwiseAnd and create masks to exclude bad pixels.
 
 `qaMask` uses the `QA_PIXEL` band to mask out unwanted pixels such as clouds, cloud shadows, cirrus, and fill.
@@ -72,13 +72,13 @@ It applies a bitmask to keep only pixels where Bits 0–4 are all zero (i.e. cle
 
 Together, these masks keep only high-quality, cloud-free, and valid pixels for further processing.
 
-### 2.What does `image.normalizedDifference()` do? 
+### 3.What does `image.normalizedDifference()` do? 
 It Calculates an index using the formula (A - B) / (A + B). For example, NDVI = (NIR - RED) / (NIR + RED).
 
-### 3. What is `image.expression()`?
+### 4. What is `image.expression()`?
 It manually defines an index formula using mathematical operations and band variables. Useful for custom formulas like EVI.
 
-### 4. What is `palette: ["white", "green"]`?
+### 5. What is `palette: ["white", "green"]`?
 This creates a color gradient. Low values (near min) are shown in white, high values (near max) in green, forming a smooth transition.
 
 ---
