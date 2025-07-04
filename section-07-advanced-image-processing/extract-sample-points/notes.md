@@ -34,7 +34,7 @@ This note summarizes the learning from Section 8: "Extract Sample Points" in the
 ![Image_rainafall_ethiopia](map_chirps_pentad_rainfall_2023_ethiopia.png)
 
 ### Sample CSV (Sample)
-![Table_rainafall_ethiopia](table_chirps_sample_points_rainfall_2023_ethiopia.csv)
+![Table_rainafall_ethiopia](table_chirps_sample_points_rainfall_2023_ethiopia.png)
 
 ---
 
