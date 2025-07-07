@@ -33,10 +33,7 @@ The chart displays average daytime LST over the region across the years 2019–2
 ### Sample Chart
 ![](chart_lst_doy_timeseries_2019-2023_roi.png)
 
----
-
 ## Notes
----
 
 ### 1. What is MODIS MOD11A2?
 
