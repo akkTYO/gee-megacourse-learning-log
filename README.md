@@ -21,13 +21,11 @@ gee-megacourse-learning-log/
 ├── section-02-remote-sensing/ # GEE API
 ├── section-03-image-collections/ # GEE Data Catalogue
 ├── section-04-basics/ 
-│ └── js-datatypes/ # Strings, numbers, lists, objects, functions
 ├── section-05-digital-image-processing/
-│ └── image-visualization/
-│ └── image-collection/
-│ └── filtering-image-collection/
-│ └── feature-collection/
-├── section-06-clustering/
+├── section-06-export-and-import-geospatial-data/
+├── section-07-advanced-image-processing/
+├── section-08-clustering-classification/
+├── section-09-drought-monitoring/
 ├── docs/ # Summary notes, reference links
 └── outputs/ # Example exports (maps, screenshots)
 
