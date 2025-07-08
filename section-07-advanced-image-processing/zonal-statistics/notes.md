@@ -34,7 +34,8 @@ This note summarizes the learning from Section 7: "Zonal Statistics" in the [Goo
 ### CSV Output (Sample)
 ![](table_chirps_annualrainfall_2023_africa.png)
 
-
+###  Graph Output (Sample)
+![](CHIRPS_Annual_Rainfall_by_Country_in_Africa.png)
 ---
 
 ## Notes
