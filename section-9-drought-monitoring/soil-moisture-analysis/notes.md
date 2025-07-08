@@ -83,8 +83,8 @@ var smapEthiopia = byYearMonth.map(function(img){
 
 Reference
 - Udemy:
-[GEE Mega Course – Section 9: Drought Monitoring]()
+[GEE Mega Course – Section 9: Drought Monitoring](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42661904#overview)
 
 -Datasets:
- - [NASA_USDA/HSL/SMAP10KM_soil_moisture (EE Catalog)](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42661904#overview)
+ - [NASA_USDA/HSL/SMAP10KM_soil_moisture (EE Catalog)](https://developers.google.com/earth-engine/datasets/catalog/NASA_USDA_HSL_SMAP10KM_soil_moisture)
  - [USDOS/LSIB_SIMPLE/2017 – Country Boundaries](https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_SIMPLE_2017?hl=ja)
