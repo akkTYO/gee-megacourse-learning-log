@@ -32,6 +32,9 @@ The chart and CSV contain monthly soil moisture estimates across Ethiopia from 2
 ### Sample Output
 ![](chart_smap_soilmoisture_timeseries_ethiopia_2016-2021.png)
 
+Figure. Monthly average soil moisture in Ethiopia from 2016 to 2021.<br>
+Data source: NASA/USDA SMAP 10km soil moisture dataset (`NASA_USDA/HSL/SMAP10KM_soil_moisture`)
+
 ---
 
 ## Notes
