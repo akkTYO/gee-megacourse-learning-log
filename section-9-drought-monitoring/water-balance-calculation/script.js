@@ -1,4 +1,4 @@
-// Water Balance Monitoring using CHIRPS and MODIS ET Data
+// Water Balance Monitoring in Rwanda using CHIRPS and MODIS ET Data
 
 // Load boundary of Rwanda
 var roi = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017")
