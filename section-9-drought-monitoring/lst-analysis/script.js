@@ -15,12 +15,15 @@ var LSTDay = collection.map(function(img){
 });
 
 // 3. Create annual Day-of-Year (DOY) timeseries chart
-var chart = ui.Chart.image.doySeriesByYear({
-  imageCollection: LSTDay,
-  bandName: "LST_Day_1km",
-  region: roi,
-  reducer: ee.Reducer.mean(),
-  scale: 1000
+var chart = ui.Chart.image.doySeriesByYear(LSTDay,　"LST_Day_1km", roi, ee.Reducer.mean(), 1000)
+.setOptions({
+  title: 'Seasonal Variation of Land Surface Temperature (2019-2023)',
+  hAxis: {
+    title: 'Day of Year (DOY)'
+  },
+  vAxis: {
+    title: 'Land Surface Temperature (°C)'
+  }
 });
 
 print(chart);
