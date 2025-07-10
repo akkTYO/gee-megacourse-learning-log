@@ -1,6 +1,6 @@
 # Annual Water Map (2019) – GEE Learning Log
 
-This note summarizes Section 11: "Annual Water Map" from the [GEE Mega Course](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42953798#overview).
+This note summarizes Section 11: "Annual Water Map" from the [GEE Mega Course](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42953794).
 
 ---
 
@@ -28,15 +28,19 @@ The map displays **areas classified as seasonal or permanent water in 2019**.
 This is useful for visualizing changes in water bodies over time.
 - Blue=water, White=non-water
 
-![](map_gsw_watermask_2019_global.png)
+### Sample Visualizations
+- **Global Distribution**  
+  ![Global Water Mask](map_jrc_gsw_yearly_2019_global.png)
 
-![](map_gsw_watermask_2019_global.png)
+- **Lake Victoria Region**  
+  ![Regional Water Mask](map_jrc_gsw_yearly_2019_lakevictoria.png)
 
 ---
 
-## Notes
+## Technical Notes
 
-### What is the JRC YearlyHistory dataset?
+### About JRC Global YearlyHistory dataset
+This dataset enables **year-by-year monitoring of water changes** across the globe.
 
 - Dataset ID: `JRC/GSW1_4/YearlyHistory`
 - Coverage: 1984–2021
@@ -47,20 +51,15 @@ This is useful for visualizing changes in water bodies over time.
   - 2 = Seasonal water
   - 3 = Permanent water
 
-This dataset enables **year-by-year monitoring of water changes** across the globe.
-
-### Difference from `GSW1_4/GlobalSurfaceWater`?
-
-| Dataset | Description |
-|--------|-------------|
-| `GlobalSurfaceWater` | Contains occurrence, seasonality, change, max_extent, etc. (summarized over time) |
-| `YearlyHistory` | Provides **annual** classification of water status for each pixel |
+[Dataset Details](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_YearlyHistory)
 
 ---
 
 ### JRC GSW Yearly History vs. Global Surface Water
+
 | Feature | Yearly History | Global Surface Water |
 |---------|----------------|----------------------|
+| Description | Provides **annual** classification of water status for each pixel | Contains occurrence, seasonality, change, max_extent, etc. (summarized over time) |
 | Temporal Resolution | Annual (1984-2021) | Composite (all years) |
 | Water Classes | 4 categories | Binary (max extent) |
 | Best For | Yearly changes | Permanent water bodies |
