@@ -11,7 +11,7 @@ focusing on visualizing national tree cover using the Hansen Global Forest Chang
 - Extracts **tree cover (%) for the year 2000**
 - Filters the region of interest to **Gabon**
 - Displays tree cover clipped to Gabon boundary
-- Adds country boundary overlay
+- Adds a red outline of Gabon's national boundary
 
 ---
 
@@ -21,17 +21,15 @@ focusing on visualizing national tree cover using the Hansen Global Forest Chang
 |--------|-------------|
 | `ee.Image("UMD/hansen/global_forest_change_2024_v1_12")` | Loads Hansen global forest change dataset |
 | `treecover2000` | Represents percent tree cover (0–100%) for year 2000 |
-| `clip(roi)` | Restricts image to Gabon country boundaries |
-| `paint()` | Draws vector boundaries on the map |
+| `.clip(roi)` | Restricts image to Gabon country boundaries |
+| `.paint()` | Draws vector boundaries on the map |
 | `Map.centerObject()` | Zooms map to the specified region |
 
 ---
 
-## Output　Sample
+## Output　Samples
+map_hansen_treecover_2000_gabon.png : Tree cover map clipped to Gabon boundary
 ![map_hansen_treecover_2000_gabon](map_hansen_treecover_2000_gabon.png)
-
-### Suggested Image Filename
-
 
 - Green areas = high tree cover
 - Black areas = low or no tree cover
@@ -42,14 +40,15 @@ focusing on visualizing national tree cover using the Hansen Global Forest Chang
 ## Notes
 
 ### What is the Hansen Global Forest Change Dataset?
-
 - **Dataset ID**: `UMD/hansen/global_forest_change_2024_v1_12`
-- **Source**: University of Maryland / Google Earth Engine
-- **Temporal coverage**: 2000–2024
-- **Resolution**: 30 meters
+- **Provider**: University of Maryland
+- **Resolution**: 30 meters (Landsat-derived)
+- **Temporal Coverage**: 2000–2024
+- **Bands**: tree cover,lossyear, gain, etc. for forest change dynamics
 - **treecover2000** band:
   - Pixel values range from 0–100 (% tree cover)
   - Based on Landsat observations from year 2000
+- **Use Case**: Monitoring forest degradation, deforestation, and restoration over time
 
 ### What does `treecover2000` represent?
 
