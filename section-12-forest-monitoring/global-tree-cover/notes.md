@@ -65,8 +65,8 @@ More: [Dataset documentation](https://developers.google.com/earth-engine/dataset
 
 ---
 
-## Reference
+## References
 
-- **Udemy**: [GEE Mega Course – Global Tree Cover](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42984302#overview)
-- **GEE Dataset**: [Hansen Global Forest Change v1.12](https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2024_v1_12)
-- **GEE Dataset**: [USDOS/LSIB_SIMPLE/2017](https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_SIMPLE_2017)
+1. [GEE Mega Course – Global Tree Cover](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/42984302#overview)
+2. [Hansen Global Forest Change v1.12](https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2024_v1_12)
+3. [USDOS/LSIB_SIMPLE/2017](https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_SIMPLE_2017)
