@@ -9,7 +9,7 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 - Loads the **Hansen Global Forest Change v1.12** dataset
 - Filters the region to **Gabon**
 - Extracts and visualizes:
-  - **Forest Loss** (2001–2024)
+  - **Forest Loss** (2000–2024)
   - **Forest Gain** (2000–2012)
 - Calculates the total loss and gain areas (square meters)
 - Adds Gabon boundary overlay
@@ -20,9 +20,9 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 | Concept | Description |
 |--------|-------------|
-| `loss` | Binary layer (1 = tree loss between 2001–2024) |
+| `loss` | Binary layer (1 = tree loss between 2000–2024) |
 | `gain` | Binary layer (1 = tree gain between 2000–2012) |
-| `updateMask()` | Masks pixels where value ≠ 1, keeps only valid forest change |
+| `updateMask()` | Masks pixels where value = 1, hides pixels where value ≠ 1|
 | `ee.Image.pixelArea()` | Returns the area (in m²) of each pixel |
 | `multiply()` | Applies pixel-wise multiplication to compute per-pixel area |
 | `reduceRegion()` | Summarizes raster data over a region using a reducer|
@@ -44,7 +44,7 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 ## Output Samples
 
-- **Forest Loss Map (2001–2024)**  
+- **Forest Loss Map (2000–2024)**  
   Pixels in red represent tree cover loss during the period  
   ![](map_hansen_forestloss_area_2001-2024_gabon.png)
 
@@ -53,7 +53,7 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
   ![](map_hansen_forestgain_area_2000-2012_gabon.png)
 
 - **Combined Gain & Loss Map**  
-  Shows both gain (blue) and loss (red) areas across Gabon  
+  Shows both gain (blue) and loss (red) areas across Gabon
   ![](map_hansen_forestgainloss_area_2000-2024_gabon.png)
 
 ---
@@ -80,11 +80,11 @@ It summarizes pixel values across a specified region using a reducer. In this ca
 - `scale: 30` uses Landsat resolution (30 meters).
 
 ### What does `.updateMask()` do?
-It hides all pixels except where loss == 1. This helps visualize only valid change areas.
+It masks pixels where the condition is true (e.g., loss == 1) and hides all other pixels. This helps visualize only valid change areas.
 
 ---
 
 ## Reference
 1. [Google Earth Engine Mega Course – Section 12](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/43096418)
-2. [Global Forest Extent：UMD/hansen/global_forest_change_2024_v1_12](https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2024_v1_12)
+2. [Global Forest Extent:UMD/hansen/global_forest_change_2024_v1_12](https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2024_v1_12)
 3. [World administrative boundaries：USDOS/LSIB_SIMPLE/2017](https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_SIMPLE_2017?hl=ja)
