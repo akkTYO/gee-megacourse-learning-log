@@ -9,7 +9,7 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 - Uses the **Hansen Global Forest Change v1.12** dataset (2000–2024)
 - Focuses on **Gabon**
 - Calculates total area (in m² and km²) of:
-  - **Forest Loss** (2000–2024)
+  - **Forest Loss** (2001–2024)
   - **Forest Gain** (2000–2012)
 - Uses pixel-wise area computation and summarization
 - Displays map layers for forest gain/loss with ROI overlay
@@ -44,9 +44,9 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 ## Output Samples
 
-- **Forest Loss Map (2000–2024)**  
+- **Forest Loss Map (2001–2024)**  
   Pixels in red represent tree cover loss during the period  
-  ![](map_hansen_forestloss_area_2000-2024_gabon.png)
+  ![](map_hansen_forestloss_area_2001-2024_gabon.png)
 
 - **Forest Gain Map (2000–2012)**  
   Pixels in blue represent areas where tree cover increased  
