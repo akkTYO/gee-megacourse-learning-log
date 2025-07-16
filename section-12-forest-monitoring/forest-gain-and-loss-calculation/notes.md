@@ -6,13 +6,13 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 ## What This Script Does
 
-- Uses the **Hansen Global Forest Change v1.12** dataset (2000–2024)
-- Focuses on **Gabon**
-- Calculates total area (in m² and km²) of:
+- Loads the **Hansen Global Forest Change v1.12** dataset
+- Filters the region to **Gabon**
+- Extracts and visualizes:
   - **Forest Loss** (2001–2024)
   - **Forest Gain** (2000–2012)
-- Uses pixel-wise area computation and summarization
-- Displays map layers for forest gain/loss with ROI overlay
+- Calculates the total loss and gain areas (square meters)
+- Adds Gabon boundary overlay
 
 ---
 
@@ -20,25 +20,25 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 | Concept | Description |
 |--------|-------------|
-| `pixelArea()` | Converts each pixel into an image of its physical area in square meters |
+| `loss` | Binary layer (1 = tree loss between 2001–2024) |
+| `gain` | Binary layer (1 = tree gain between 2000–2012) |
+| `updateMask()` | Masks pixels where value ≠ 1, keeps only valid forest change |
+| `ee.Image.pixelArea()` | Returns the area (in m²) of each pixel |
 | `multiply()` | Applies pixel-wise multiplication to compute per-pixel area |
-| `reduceRegion()` | Aggregates pixel data within a specified geometry (e.g. total sum) |
+| `reduceRegion()` | Summarizes raster data over a region using a reducer|
 | `ee.Reducer.sum()` | Calculates the total sum of pixel values in a region |
-| `scale` | Pixel resolution used for reduction, here 30m |
-| `updateMask()` | Shows only pixels with value = 1, hiding background |
+| `geometry` | Extracts the geometry (shape) of the region of interest (ROI) |
+| `scale: 30` | Uses 30m resolution for analysis (Landsat scale) |
 
 ---
 
 ## Output
 
-### Calculated Forest Statistics (Gabon, 2000–2024)
+### Sample Area Outputs:
 
-- **Total Forest Loss Area**: `5604.04 km²`
-- **Total Forest Gain Area**: `387.39 km²`
-
-- **Bar Chart: Gain vs Loss in Gabon (2000–2024)**  
-  Visual summary of total gain and loss area (unit: km²)  
-  ![](calc_hansen_forestgainloss_2000-2024_gabon.png)
+- **Total Forest Loss**: `5604.04 km²`
+- **Total Forest Gain**: `387.39 km²`
+![](calc_hansen_forestgainloss_2000-2024_gabon.png)
 
 ---
 
@@ -59,18 +59,28 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 ---
 
 ## Notes
+### Dataset Description: Hansen Global Forest Change v1.12
+- Dataset: UMD/hansen/global_forest_change_2024_v1_12
+- Time Span: 2000–2024
+- Resolution: 30m
+- Loss Band: Pixel = 1 if tree cover loss occurred in any year
+- Gain Band: Pixel = 1 if forest growth occurred between 2000 and 2012
 
-### What does `.pixelArea()` do?
-Returns an image where each pixel value is the area in square meters. Useful for calculating the area of features like forest loss or gain.
+### What is `ee.Image.pixelArea()`?
+This function returns the area (in square meters) for each pixel.
+When multiplied with a binary mask (like loss or gain), it gives the total area of change.
 
 ### Why use `.multiply(pixelArea)`?
 This converts a binary mask (e.g. 1 for loss) into an area raster. When summed, it gives the total area affected.
 
-### What does `reduceRegion()` with `ee.Reducer.sum()` do?
-This aggregates the pixel-wise area image over the region of interest (`roi`). It outputs the total surface area (in m²) for forest loss or gain.
+### What is `reduceRegion()` doing?
+It summarizes pixel values across a specified region using a reducer. In this case:
+- `ee.Reducer.sum()` calculates the total sum of changed pixel areas.
+- `geometry`: roi.geometry() specifies the area of Gabon.
+- `scale: 30` uses Landsat resolution (30 meters).
 
 ### What does `.updateMask()` do?
-Keeps only the pixels with a value of 1 (loss or gain), and masks out 0s. This improves map readability and accuracy of area computation.
+It hides all pixels except where loss == 1. This helps visualize only valid change areas.
 
 ---
 
