@@ -26,13 +26,24 @@ This note summarizes the learning from Section 12 of the [Google Earth Engine Me
 
 ---
 
-## Output
+## Output Samples
+1. Forest Loss in Gabon (2000–2024)
+Description:
+This map highlights areas in Gabon that experienced forest cover loss between 2000 and 2024 using the Hansen Global Forest Change dataset v1.12.
+Only pixels with loss = 1 are shown in red, indicating complete removal of tree canopy.
+![](map_hansen_forestloss_2000-2024_gabon.png)
 
-### Suggested Image Filenames
+2. Forest Gain in Gabon (2000–2012)
+Description:
+This map shows areas of forest gain (regrowth) in Gabon, based on Hansen dataset’s gain band.
+The gain represents areas where new forest growth occurred between 2000 and 2012. Highlighted in blue.
+![](map_hansen_forestgain_2000-2024_gabon.png)
 
-- `map_hansen_forestloss_2000-2024_gabon.png`
-- `map_hansen_forestgain_2000-2024_gabon.png`
-- `map_hansen_forestgainloss_2000-2024_gabon.png`
+3. Forest Change Map – Gain and Loss in Gabon
+Description:
+A combined map showing both forest loss (red) from 2000–2024 and gain (blue) from 2000–2012 in Gabon.
+Useful for comparing deforestation and regrowth areas in one view using Hansen Global Forest Change v1.12 data.
+![](map_hansen_forestgainloss_2000-2024_gabon.png)
 
 ---
 
