@@ -48,6 +48,14 @@ This note summarizes the learning from Section 13 of the [Google Earth Engine Me
 - **Resolution**: ~7 km at nadir.
 - **Update Frequency**: Near-daily, aggregated to monthly here.
 
+### Why is there missing data in high-latitude regions (e.g. Russia, Arctic)?
+
+The image created from Sentinel-5P data for January-February 2024 shows a lack of data in high-latitude regions such as Russia and the Arctic Circle. This is due to the following reasons:
+- **Polar Night**: Sentinel-5P is a satellite in a sun-synchronous orbit and requires sunlight for its observations. During the winter months in the Northern Hemisphere (January-February), these high-latitude areas experience "polar night," where the sun does not rise. Without sunlight to reflect off the Earth's surface and atmosphere, the satellite cannot obtain valid observation data.
+- **Cloud Cover**: In areas covered by thick clouds, the satellite's view of the ground is blocked, making it impossible to measure gas concentrations in the lower atmosphere. This can also result in data gaps.
+
+Therefore, the blank areas on the map do not necessarily indicate an absence of CO, but rather an inability to collect data due to a lack of sunlight.
+
 ### What does `.mean()` do?
 - It takes all images in the specified date range (January 2024) and computes the **pixel-wise average**.
 - Useful for smoothing daily fluctuations and creating a **monthly composite**.
