@@ -26,10 +26,10 @@ This note summarizes the learning from Section 13 of the [Google Earth Engine Me
 
 ## Output
 ### Output Samples
-
+**Global Map of Carbon Monoxide (CO)**
 ![](`map_s5p_co_mean_2024-01_global.png`)
 
-- **Global Map of Carbon Monoxide (CO)**
+- Global Map of Carbon Monoxide (CO)
   - Monthly mean from January 2024
   - Red areas indicate high CO concentration
   - Black/blue indicate low CO levels
