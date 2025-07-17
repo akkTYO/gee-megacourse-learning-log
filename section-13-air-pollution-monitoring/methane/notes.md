@@ -61,6 +61,36 @@ This note summarizes the learning from Section 13 of the [Google Earth Engine Me
 - **Policy Support**: Providing data for emission inventories and regulatory compliance
 - **Research**: Understanding methane sources and atmospheric chemistry
 
+### Why is there missing data in high-latitude regions (e.g., Russia, Arctic)?
+
+The methane data from Sentinel-5P TROPOMI shows significant data gaps in high-latitude regions such as Russia and the Arctic Circle during winter months (January-February). This is due to several fundamental limitations of satellite-based atmospheric observations:
+
+**1. Polar Night Conditions**: 
+- **Seasonal lack of solar radiation**: TROPOMI requires sunlight to measure atmospheric gases using near-infrared wavelengths
+- **Polar night phenomenon**: During winter months, areas north of the Arctic Circle (approximately 66°34'N) experience polar night, where the sun does not rise above the horizon for extended periods
+- **Solar zenith angle limitations**: Even when the sun is above the horizon, large solar zenith angles (>70°) significantly reduce measurement quality and reliability
+
+**2. Technical Constraints**: 
+- **Instrument sensitivity**: TROPOMI's methane retrieval algorithm requires sufficient solar illumination to detect the weak absorption signals in the near-infrared spectrum
+- **Atmospheric scattering**: Large solar zenith angles increase atmospheric scattering, complicating the estimation of radiation path length through the atmosphere
+- **Quality filtering**: Data with poor quality due to low light conditions are automatically filtered out to maintain product reliability
+
+**3. Surface Conditions**: 
+- **Snow and ice coverage**: Snow-covered surfaces have different reflectance properties that can affect the accuracy of atmospheric retrievals
+- **Cloud cover**: Persistent cloud cover in polar regions during winter further limits the availability of clear-sky observations
+
+**4. Orbital Characteristics**: 
+- **Satellite coverage patterns**: While Sentinel-5P has a sun-synchronous orbit providing global coverage, the effectiveness of observations decreases significantly at high latitudes during winter
+- **Data processing constraints**: Measurements with solar zenith angles exceeding certain thresholds (typically 70-80°) are excluded from standard processing
+**5.Implications for Data Interpretations**: 
+- **Temporal coverage**: High-latitude methane data is primarily available during spring, summer, and early autumn months
+- **Seasonal bias**: Winter emissions from high-latitude sources (e.g., permafrost, industrial activities) may be underrepresented in annual averages
+- **Research limitations**: Studies focusing on Arctic methane emissions must account for these seasonal data gaps
+
+This limitation is not unique to methane observations but affects all TROPOMI trace gas products that rely on solar radiation for atmospheric retrievals. Alternative approaches, such as thermal infrared observations or ground-based measurements, are often used to complement satellite data in polar regions during winter months.
+
+
+
 ## Reference
 
 1. Learning materials: [GEE Mega Course – Section 13: Air Pollution Monitoring](https://www.udemy.com/course/google-earth-engine-gis-remote-sensing/learn/lecture/43212640)
