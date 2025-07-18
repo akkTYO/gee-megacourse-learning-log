@@ -9,7 +9,9 @@ var years = ee.List.sequence(2016, 2021);
 var months = ee.List.sequence(1, 12);
 
 // Load SMAP Soil Moisture dataset (Surface Soil Moisture, 10km)
-var coll = ee.ImageCollection("NASA_USDA/HSL/SMAP10KM_soil_moisture").select("ssm");
+var coll = ee.ImageCollection("NASA_USDA/HSL/SMAP10KM_soil_moisture")
+              .filterDate("2016-01-01", "2021-12-31")
+              .select("ssm");
 
 // Visualize average soil moisture
 var soilVis = {
@@ -18,7 +20,7 @@ var soilVis = {
   palette: ["0300ff", "418504", "efff07", "ff0303"]
 };
 Map.setCenter(17, 13, 2);
-Map.addLayer(coll.mean(), soilVis, "Soil Moisture");
+Map.addLayer(coll.mean().clip(roi), soilVis, "Soil Moisture (2016‑2021)");
 
 // Annotate each image with month and year as metadata
 var smap = coll.map(function(img){
