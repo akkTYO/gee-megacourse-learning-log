@@ -28,10 +28,13 @@ This note summarizes the learning from [Google Earth Engine Mega Course – Sect
 
 ### Output Samples
 
+**Classified Composite**
 ![map_dw_classified_composite](map_dw_classified_composite_2021_ethiopia.png)
 
+**Probability Hillshade**
 ![map_dw_probability_hillshad](map_dw_probability_hillshade_2021_ethiopia.png)
 
+**Viewer App Screenshot**
 ![map_dw_viewerapp](map_dw_viewerapp_2021_ethiopia.png)
 
 ### Image Descriptions
