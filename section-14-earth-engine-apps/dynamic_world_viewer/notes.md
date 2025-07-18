@@ -28,7 +28,7 @@ This note summarizes the learning from [Google Earth Engine Mega Course – Sect
 
 ### Output Samples
 
-- ![map_dynamicworld_ethiopia](map_dynamicworld_lulc_mode_2021_ethiopia.png)
+![map_dynamicworld_ethiopia](map_dynamicworld_lulc_mode_2021_ethiopia.png)
 
 ### Map Description
 
