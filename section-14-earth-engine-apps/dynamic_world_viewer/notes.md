@@ -28,14 +28,17 @@ This note summarizes the learning from [Google Earth Engine Mega Course – Sect
 
 ### Output Samples
 
-![map_dynamicworld_ethiopia](map_dynamicworld_mode_composite_2021_ethiopia.png)
+![map_dw_classified_composite](map_dw_classified_composite_2021_ethiopia.png)
 
-### Map Description
+![map_dw_probability_hillshad](map_dw_probability_hillshade_2021_ethiopia.png)
 
-- **Land Cover Mode Composite**
-  - Based on Dynamic World label band in 2021
-  - Clipped to **Ethiopia**
-  - Enhanced with top-1 probability **hillshade**
+![map_dw_viewerapp](map_dw_viewerapp_2021_ethiopia.png)
+
+### Image Descriptions
+
+- Classified Composite: Most frequent land cover type per pixel (2021, Ethiopia)
+- Probability Hillshade: Top-1 class confidence modulated with hillshade effect
+- Viewer App Screenshot: Custom legend + title overlay + clipped results
 
 ---
 
@@ -80,10 +83,29 @@ This note summarizes the learning from [Google Earth Engine Mega Course – Sect
 - Support **disaster response** (e.g. floods, wildfires, droughts)
 - Land cover change detection for **policy** and **environmental management**
 
+---
+
+### What’s the difference between "classified composite" and "probability hillshade"?
+
+| Feature     | Classified Composite            | Probability Hillshade                         |
+| ----------- | ------------------------------- | --------------------------------------------- |
+| Output Type | One class per pixel (mode)      | Top-1 class confidence modulated by hillshade |
+| Purpose     | Final land cover classification | Visualization of classification confidence    |
+| Technique   | `.reduce(ee.Reducer.mode())`    | `.reduce(ee.Reducer.mean())` + `.max()`       |
+| Appearance  | Sharp, crisp land cover map     | Smooth, shaded, highlights confidence         |
+| Best Use    | Area statistics, masks, export  | Visual analysis, presentation layer           |
+
+
+The classified composite is more deterministic, while the probability hillshade gives you a better idea of confidence and uncertainty.
+
+---
+
 ### What does `.reduce(ee.Reducer.mode())` do?
 
 - Selects the **most frequent label** (e.g., Crops, Trees, Water) at each pixel across the year.
 - This helps summarize temporal data into a **single representative map**.
+
+---
 
 ### What is "Top-1 Probability Hillshade"?
 
